@@ -19,6 +19,6 @@ Project Flowchat
 
 Contacts
 Author:
-<b>Wenjin Li</b>
+<b>Wenjin Li</b><br>
 Wenjin.Li@csiro.au
 
