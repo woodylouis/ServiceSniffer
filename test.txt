@@ -1,0 +1,404 @@
+{'nmap': {'command_line': 'nmap -oX - --min-hostgroup=5000 --max-hostgroup=100000 --min-parallelism=100 --max-parallelism=200 --host-timeout=2s -T5 -n -sP 152.83.247.1-10', 'scaninfo': {'warning': ['Warning: You specified a highly aggressive --min-hostgroup.\r\n']}, 'scanstats': {'timestr': 'Wed Aug 01 16:39:36 2018', 'elapsed': '1.70', 'uphosts': '7', 'downhosts': '3', 'totalhosts': '10'}}, 'scan': {'152.83.247.1': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.1'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.2': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.2'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.3': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.3'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.4': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.4'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.5': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.5'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.6': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.6'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}, '152.83.247.10': {'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.10'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.1'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.2'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.3'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.4'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.5'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.6'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+{'hostnames': [{'name': '', 'type': ''}], 'addresses': {'ipv4': '152.83.247.10'}, 'vendor': {}, 'status': {'state': 'up', 'reason': 'echo-reply'}}
+There are 7 active hosts online. The hosts are: 
+1: 152.83.247.1
+2: 152.83.247.2
+3: 152.83.247.3
+4: 152.83.247.4
+5: 152.83.247.5
+6: 152.83.247.6
+7: 152.83.247.10
+
+#################Host: 152.83.247.1#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 42
+Status:open
+reason:syn-ack
+Additional Info
+Service: nameserver
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 53
+Status:open
+reason:syn-ack
+Additional Info
+Service: domain
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 139
+Status:open
+reason:syn-ack
+Additional Info
+Service: netbios-ssn
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[8]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[9]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[10]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.1
+#################Host: 152.83.247.2#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.2
+#################Host: 152.83.247.3#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.3
+#################Host: 152.83.247.4#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.4
+#################Host: 152.83.247.5#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 53
+Status:open
+reason:syn-ack
+Additional Info
+Service: domain
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[8]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.5
+#################Host: 152.83.247.6#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 53
+Status:open
+reason:syn-ack
+Additional Info
+Service: domain
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 88
+Status:open
+reason:syn-ack
+Additional Info
+Service: kerberos-sec
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 389
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldap
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+-----------------TCP Service Detail[6]-----------------
+TCP Port Number: 464
+Status:open
+reason:syn-ack
+Additional Info
+Service: kpasswd5
+product: 
+-----------------TCP Service Detail[7]-----------------
+TCP Port Number: 593
+Status:open
+reason:syn-ack
+Additional Info
+Service: http-rpc-epmap
+product: 
+-----------------TCP Service Detail[8]-----------------
+TCP Port Number: 636
+Status:open
+reason:syn-ack
+Additional Info
+Service: ldapssl
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.6
+#################Host: 152.83.247.10#################
+-----------------TCP Service Detail[1]-----------------
+TCP Port Number: 80
+Status:open
+reason:syn-ack
+Additional Info
+Service: http
+product: 
+-----------------TCP Service Detail[2]-----------------
+TCP Port Number: 135
+Status:open
+reason:syn-ack
+Additional Info
+Service: msrpc
+product: 
+-----------------TCP Service Detail[3]-----------------
+TCP Port Number: 139
+Status:open
+reason:syn-ack
+Additional Info
+Service: netbios-ssn
+product: 
+-----------------TCP Service Detail[4]-----------------
+TCP Port Number: 443
+Status:open
+reason:syn-ack
+Additional Info
+Service: https
+product: 
+-----------------TCP Service Detail[5]-----------------
+TCP Port Number: 445
+Status:open
+reason:syn-ack
+Additional Info
+Service: microsoft-ds
+product: 
+--------------------IP address detail--------------------
+IP Address: 152.83.247.10
+-----------------Time Used-----------------
+Used 16.00 seconds
