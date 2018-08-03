@@ -1,5 +1,5 @@
 
-with open('31072018.txt', 'r') as f:
+with open('filename', 'r') as f:
     rows = f.read()
     text_lines = rows.split('#################')
     for i, row in enumerate(text_lines):
