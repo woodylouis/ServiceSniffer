@@ -32,7 +32,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="531" />
+    <option name="x" value="265" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -99,7 +99,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="471" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="520" y="23" width="1440" height="877" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
