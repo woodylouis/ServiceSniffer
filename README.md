@@ -1,17 +1,10 @@
 <h1>Sniffing for Services</h1>
 
-CSIRO publishes a large amount of scientific data both internally and externally. Some of the data we publish is via web services, both standard and custom. Despite sophisticated server management tools, it's very hard to know what services are installed across all CSIRO publication systems. It's even harder to know, centrally, what the published data is about.
-First part is to use Python to write a program to scan all the open ports known to support specific applications and testing endpoints with a range of requests standard services are known to answer.
-The second part is to mine the descriptions of data exposed by the services and map them to standard dictionaries of data description terms. 
+<p>The Commonwealth Scientific and Industrial Research Organisation (CSIRO) is an independent Australian Federal government agency responsible for scientific research. As a result, CSIRO publishes a large amount of scientific data both internally and externally. Some of the data it publishes is via web services, both standard and custom. Despite sophisticated server management tools, it is very hard to know what services are installed across all CSIRO publication systems as a lot of the data services are ad hoc and not catalogued. It’s even harder to know, centrally, what the published data is about. 
 
-Once discovered and identified, the student will then write more difficult code to mine the descriptions of data exposed by the services and map them to standard dictionaries of data description terms. The result will be updated to a database
+The main goal of the project is to help CSIRO identify and catalogue data services. The outcome of the project should help users like research scientists in CSIRO to search and discover what data services are available on the CSIRO network. A NASA web service, based on Thredds data server, is a good example for the project to start with to make query, which contains a catalogue for different datasets.
 
-Outcomes
-1.	a network sniffing bot with the ability to slot in multiple tests
-2.	a starting set of web service tests to be implemented by the bot
-3.	some code for specific service types to extract description terms
-4.	(stretch goal) code to compare extracted description terms to standard dictionaries
-5.	(stretch, stretch goal) code to write extracted and compared terms to an updatable database
+This project is to write code to interrogate CSIRO’s internal and external web presences and hunt for particular service technologies. This involve polling for open ports known to support specific applications and testing endpoints with a range of requests standard services are known to answer. Once discovered and identified, it is required to design a data structure like a database that is used to make queries of the descriptions of data exposed by the services and map them to standard dictionaries of data description terms.</p>
 
 Project Flowchat
 [Please click here to see the flowchat](https://www.draw.io/#G192cdVPcxf24mYAUQ_fM0hfHQNZcx_Zat)
