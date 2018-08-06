@@ -14,7 +14,7 @@ Outcomes
 5.	(stretch, stretch goal) code to write extracted and compared terms to an updatable database
 
 Project Flowchat
-[Please click here to see the flowchat](https://drive.google.com/file/d/1on3AIzCGQ0RNjU-ekA0VLm2iZv2f_2Rw/view?usp=sharing)
+[Please click here to see the flowchat](https://www.draw.io/#G192cdVPcxf24mYAUQ_fM0hfHQNZcx_Zat)
 
 
 Contacts
