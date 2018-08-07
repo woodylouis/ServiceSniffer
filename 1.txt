@@ -1,0 +1,178 @@
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.3/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.7/thredds/catalog.html
+Http Error: 503 Server Error: Service Unavailable for url: http://130.116.24.10/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.12/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.14/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.16/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.18/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.21/thredds/catalog.html
+Http Connected 130.116.24.23 <Response [200]>
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.50/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='130.116.24.60', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06D70CB0>, 'Connection to 130.116.24.60 timed out. (connect timeout=1)'))
+Error Connecting: HTTPConnectionPool(host='130.116.24.61', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06D99030>, 'Connection to 130.116.24.61 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.69/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.89/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.91/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='130.116.24.103', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06D70A10>, 'Connection to 130.116.24.103 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.108/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.109/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.110/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.24.124/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.26/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.27/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.33/thredds/catalog.html
+Error Connecting: HTTPSConnectionPool(host='130.116.26.63', port=443): Max retries exceeded with url: /thredds/catalog.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1045)')))
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.101/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.102/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.103/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.109/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.110/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.26.112/thredds/catalog.html
+Http Error: 401 Client Error: Authorization Required for url: http://130.116.27.4/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.10/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.17/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.18/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.20/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.41/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.27.42/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='130.116.27.43', port=80): Read timed out.
+Error Connecting: HTTPConnectionPool(host='130.116.27.44', port=80): Read timed out.
+Error Connecting: HTTPConnectionPool(host='130.116.27.67', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06D99310>, 'Connection to 130.116.27.67 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://130.116.28.9/thredds/catalog.html
+Http Error: 503 Server Error: Service Unavailable for url: http://130.116.28.11/thredds/catalog.html
+Http Error: 503 Server Error: Service Unavailable for url: http://130.116.28.12/thredds/catalog.html
+Http Error: 503 Server Error: Service Unavailable for url: http://130.116.28.13/thredds/catalog.html
+Http Error: 503 Server Error: Service Unavailable for url: http://130.116.28.15/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.62.16/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.62.17/thredds/catalog.html
+Http Error: 404 Client Error: Site or Page Not Found for url: http://130.116.62.21/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.72.2/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.74.5/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='130.116.80.9', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06D99750>, 'Connection to 130.116.80.9 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://130.116.80.70/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.80.92/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.81.14/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.96.12/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.102.76/thredds/catalog.html
+Http Error: 404 Client Error: Site or Page Not Found for url: http://130.116.106.121/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='130.116.112.8', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06DB2390>, 'Connection to 130.116.112.8 timed out. (connect timeout=1)'))
+Error Connecting: HTTPConnectionPool(host='130.116.112.9', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06DB2730>, 'Connection to 130.116.112.9 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://130.116.112.14/thredds/catalog.html
+Http Error: 401 Client Error: Unauthorized for url: http://130.116.114.51/
+Http Error: 401 Client Error: Unauthorized for url: http://130.116.114.59/
+Http Error: 401 Client Error: Unauthorized for url: http://130.116.114.67/
+Http Error: 401 Client Error: Unauthorized for url: http://130.116.114.74/
+Timeout Error: HTTPConnectionPool(host='130.116.140.54', port=80): Read timed out. (read timeout=1)
+Http Error: 404 Client Error: Not Found for url: http://130.116.140.55/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.140.82/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.10/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.11/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.19/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.21/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.22/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.23/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.24/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.26/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.149.27/thredds/catalog.html
+Http Connected 130.116.151.3 <Response [200]>
+Http Connected 130.116.151.10 <Response [200]>
+Http Connected 130.116.151.11 <Response [200]>
+Http Connected 130.116.151.13 <Response [200]>
+Http Connected 130.116.151.14 <Response [200]>
+Http Connected 130.116.151.15 <Response [200]>
+Http Connected 130.116.151.16 <Response [200]>
+Http Connected 130.116.151.17 <Response [200]>
+Http Connected 130.116.151.18 <Response [200]>
+Http Connected 130.116.151.19 <Response [200]>
+Http Error: 404 Client Error: Not Found for url: http://130.116.152.13/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.153.12/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.153.14/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.155.13/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.155.92/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.12/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.13/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.14/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.15/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.16/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.17/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.18/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.19/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.20/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.21/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.22/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.23/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.24/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.25/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.26/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://130.116.170.27/thredds/catalog.html
+Http Connected 130.116.171.10 <Response [200]>
+Http Connected 130.116.180.10 <Response [200]>
+Http Connected 130.116.180.11 <Response [200]>
+Http Connected 130.116.180.12 <Response [200]>
+Http Connected 138.194.4.9 <Response [200]>
+Http Connected 138.194.4.10 <Response [200]>
+Http Connected 138.194.4.12 <Response [200]>
+Http Connected 138.194.4.13 <Response [200]>
+Http Connected 138.194.4.14 <Response [200]>
+Http Connected 138.194.4.15 <Response [200]>
+Http Connected 138.194.4.16 <Response [200]>
+Http Connected 138.194.4.17 <Response [200]>
+Http Connected 138.194.4.20 <Response [200]>
+Http Connected 138.194.4.21 <Response [200]>
+Http Connected 138.194.4.22 <Response [200]>
+Http Connected 138.194.4.23 <Response [200]>
+Http Connected 138.194.4.24 <Response [200]>
+Http Connected 138.194.4.25 <Response [200]>
+Http Connected 138.194.4.26 <Response [200]>
+Http Connected 138.194.4.27 <Response [200]>
+Http Connected 138.194.4.28 <Response [200]>
+Http Connected 138.194.4.29 <Response [200]>
+Http Connected 138.194.4.30 <Response [200]>
+Http Connected 138.194.4.31 <Response [200]>
+Http Connected 138.194.4.33 <Response [200]>
+Http Connected 138.194.4.34 <Response [200]>
+Http Connected 138.194.4.36 <Response [200]>
+Http Connected 138.194.4.37 <Response [200]>
+Http Connected 138.194.4.40 <Response [200]>
+Error Connecting: HTTPSConnectionPool(host='138.194.4.41', port=443): Max retries exceeded with url: /thredds/catalog.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1045)')))
+Http Connected 138.194.4.44 <Response [200]>
+Http Connected 138.194.4.51 <Response [200]>
+Http Connected 138.194.4.52 <Response [200]>
+Http Connected 138.194.4.53 <Response [200]>
+Http Connected 138.194.4.54 <Response [200]>
+Http Connected 138.194.4.55 <Response [200]>
+Error Connecting: HTTPSConnectionPool(host='138.194.7.137', port=443): Max retries exceeded with url: /manual/go_ssl (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1045)')))
+Error Connecting: HTTPConnectionPool(host='138.194.10.83', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06DB2F10>, 'Connection to 138.194.10.83 timed out. (connect timeout=1)'))
+Error Connecting: HTTPSConnectionPool(host='138.194.16.5', port=443): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.VerifiedHTTPSConnection object at 0x06DBB150>, 'Connection to 138.194.16.5 timed out. (connect timeout=1)'))
+Error Connecting: HTTPSConnectionPool(host='138.194.21.7', port=443): Max retries exceeded with url: /index.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1045)')))
+Http Error: 401 Client Error: Unauthorized for url: http://138.194.25.46/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.26.10/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.26.14/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.26.15/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.26.16/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.27.7/thredds/catalog.html
+Http Error: 404 Client Error: File Not Found for url: http://138.194.27.13/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.27.20/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.27.44/thredds/catalog.html
+Http Error: 404 Client Error: NOT FOUND for url: http://138.194.29.37/thredds/catalog.html
+Error Connecting: HTTPConnectionPool(host='138.194.32.9', port=80): Max retries exceeded with url: /thredds/catalog.html (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x06DB20D0>, 'Connection to 138.194.32.9 timed out. (connect timeout=1)'))
+Http Error: 404 Client Error: Not Found for url: http://138.194.37.100/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.37.101/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.39.90/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.39.91/thredds/catalog.html
+Http Connected 138.194.39.100 <Response [200]>
+Http Connected 138.194.39.101 <Response [200]>
+Http Connected 138.194.39.103 <Response [200]>
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.34/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.35/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.36/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.38/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.42/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.43/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.44/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.45/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.46/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.47/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.48/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.49/thredds/catalog.html
+Http Error: 404 Client Error: Not Found for url: http://138.194.40.51/thredds/catalog.html
