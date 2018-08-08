@@ -1,0 +1,13 @@
+Read and follow http://unidata.github.io/netcdf4-python/#section1
+
+When error message "Microsoft Visual C++ 14.0 is required" is shown, try the following.
+
+1. Hit here go download dependencies that suit your pc
+   <a>https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted</a>
+
+2. Move the file to destination you want
+
+3. pip install
+   1) Twisted-18.7.0-cp37-cp37m-win32.whl
+   2) cftime-1.0.0-cp37-cp37m-win32.whl
+   3) netCDF4-1.4.0-cp37-cp37m-win32.whl

@@ -1,44 +1,16 @@
-import requests
-import sys
+from netCDF4 import Dataset
 
-with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData.txt', 'r') as f:
-    rows = f.read()
-    text_lines = rows.split('#################')
-    httpHostList = []
-    for i, row in enumerate(text_lines):
-        if 'http' in str(row):
-            hosts = text_lines[i - 1].strip("Host: ")
-            httpHostList.append(hosts)
-    # print(httpHostList)
-    # print(len(httpHostList))
-    for httpHost in httpHostList:
-        urls = 'http://' + httpHost + '/thredds/catalog.html'
-        # print(urls)
-        try:
-            r = requests.get(urls, timeout=1)
-            r.raise_for_status()
-            print("Http Connected", httpHost, r)
+dataset = Dataset("C:/Users/LI252/Desktop/SMIPSv0.5.nc")
+#print(dataset.file_format)
+#print(dataset.dimensions.keys())
+#print(dataset.dimensions['lon'])
 
+#print(dataset.variables.keys())
+#print(dataset.variables['time'])
+#
+# for attr in dataset.ncattrs():
+#      print(attr, '=', getattr(dataset, attr))
+#print(dataset.ncattrs()) ##['description', 'history']
 
-        except requests.exceptions.HTTPError as errh:
-
-            print("Http Error:", errh)
-
-        except requests.exceptions.ConnectionError as errc:
-
-            print("Connection Error for ", httpHost)
-
-        except requests.exceptions.Timeout as errt:
-
-            print("Timeout Error:", errt)
-
-        except requests.exceptions.RequestException as err:
-
-            print("OOps: Something Else", err)
-
-
-
-
-
-
+print(dataset.units)
 
