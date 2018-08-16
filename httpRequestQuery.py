@@ -1,6 +1,7 @@
 import requests
+import time
 
-with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData-dummy.txt', 'r') as f:
+with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData.txt', 'r') as f:
     rows = f.read()
     text_lines = rows.split('#################')
     httpHostList = []
@@ -9,6 +10,7 @@ with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData-dummy.txt
     noThreddsInstalledHostList = []
     redirectToOtherURL = []
     unknownError = []
+    t1 = time.time()
     for i, row in enumerate(text_lines):
         if 'http' in str(row):
             hosts = text_lines[i - 1].strip("Host: ")
@@ -41,7 +43,7 @@ with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData-dummy.txt
         else:
             if httpHost not in hostStatusDict:
                 hostStatusDict[httpHost] = str(r.status_code)
-    print(hostStatusDict, "all hosts status Dict is above ###\n\n")
+    print("###There are", len(hostStatusDict), "host\n", hostStatusDict, "all hosts status Dict is above ###\n\n")
 
     for host, status in hostStatusDict.items():
         if status == '404':
@@ -59,10 +61,13 @@ with open('C:/Users/LI252/Desktop/ScanResults/02082018_ScanningRawData-dummy.txt
 
     # for theHost in noThreddsInstalledHostList:
 
-    print("These host redirect to firewall login page\n", redirectToOtherURL)
-    print("These host may have thredd installed\n", threddsCandidateHostList, '\n')
-    print("no thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
-    print("unknow\n", unknownError)
+    print("There are", len(redirectToOtherURL), "hosts redirect to firewall login page\n", redirectToOtherURL, '\n')
+    print("There are", len(threddsCandidateHostList), "hosts may have Thredds installed\n", threddsCandidateHostList, '\n')
+    print("There are",  len(noThreddsInstalledHostList), "hosts have no Thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
+    print("There are", len(unknownError), "unknown error hosts\n", unknownError, '\n')
+
+    t2 = time.time()
+    print("-" * 17 + "Time Used" + '-' * 17 + "\n" + str("Used %.2f" % (t2 - t1) + " seconds"))
 
 
 

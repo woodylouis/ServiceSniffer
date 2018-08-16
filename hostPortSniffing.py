@@ -3,6 +3,18 @@ import sys
 import time
 import os
 
+addresses = []
+address = []
+try:
+    with open(input("Please enter the path for the files that contains address: "), "r") as f:
+
+        li = [i.strip().split() for i in f]
+        addresses = [item for sublist in li for item in sublist]
+        for address in addresses:
+            print(''.join(address))
+except:
+    print("Please enter a valid file path")
+
 class PingHosts:
     ## network initialisation
     def __init__(self, networkPrefix):
@@ -87,9 +99,5 @@ class PingHosts:
         t2 = time.time()
         print("-" * 17 + "Time Used" + '-' * 17 + "\n" + str("Used %.2f"%(t2 - t1) + " seconds"))
 
-
-
-
-
-
-
+result = PingHosts(address)
+result.nmapPingScan()
