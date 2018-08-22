@@ -5,8 +5,8 @@ import requests
 
 
 date = datetime.datetime.now().strftime("%d%m%Y_%H%M%S")
-# reportName = str(date) + "_ScanReport" + ".txt"
-# scanReport = open(reportName, "a")
+reportName = str(date) + "_ScanReport" + ".txt"
+scanReport = open(reportName, "a")
 
 class ThreddsURLS:
 
@@ -37,7 +37,7 @@ class ThreddsURLS:
             if hostStatus == 'up':
                 activeHosts.append(host)
         totalActiveHosts = ("There are " + str(len(activeHosts)) + " active hosts online. The hosts are: \n" + '\n'.join('{}: {}'.format(*k) for k in enumerate(activeHosts, start=1)) + "\n")
-        print(totalActiveHosts)
+        #scanReport.write(str(totalActiveHosts))
         #scanReport.write(totalActiveHosts)
         # """
         # 1-1024 popular port
@@ -53,10 +53,13 @@ class ThreddsURLS:
         # """
         for host in activeHosts:
             aDict = nm.scan(hosts=host, arguments='--min-hostgroup=5000 --max-hostgroup=100000 --min-parallelism=100 --max-parallelism=200 --host-timeout=2s -T5 -n -v', ports="80, 1433-1434, 2483-2484, 800, 3306, 4333, 5432, 5000, 8080, 9000, 8433, 27017, 50000")
-            #scanReport.write(str(aDict))
+            scanReport.write(str(aDict))
             for serviceScan in aDict['scan'].values():
                 host = serviceScan['addresses']['ipv4']
-                portInfo = serviceScan['tcp']
+                try:
+                    portInfo = serviceScan['tcp']
+                except:
+                    pass
                 for port, info in portInfo.items():
                     hostServices = info['name']
                     portState = info['state']
@@ -117,6 +120,9 @@ class ThreddsURLS:
         print("There are", len(threddsCandidateHostList), "urls may have Thredds installed\n", threddsCandidateHostList, '\n')
         print("There are", len(noThreddsInstalledHostList), "urls have no Thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
         print("There are", len(unknownError), "unknown error urls\n", unknownError, '\n')
+        t2 = time.time()
+
+        print("-" * 17 + "Time Used" + '-' * 17 + "\n" + str("Used %.2f" % (t2 - t1) + " seconds"))
 try:
     f = open(input("Please enter the path for the files that contains address: "), "r")
     network = f.read()
