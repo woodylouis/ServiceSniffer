@@ -2,6 +2,7 @@ import nmap
 import time
 import datetime
 import requests
+import re
 
 
 date = datetime.datetime.now().strftime("%d%m%Y_%H%M%S")
@@ -21,7 +22,6 @@ class ThreddsURLS:
         t1 = time.time()
         nm = nmap.PortScanner()
         activeHosts = []
-        aDict = {}
         portDict = {}
         hostInfoDict = {}
         """
@@ -72,11 +72,11 @@ class ThreddsURLS:
                         if host not in hostInfoDict:
                             hostInfoDict[host] = portDict
         #print(hostInfoDict)
-        #hostInfoDict = {'152.83.247.62': {80: 'http', 8080: 'http-proxy'}, '152.83.247.64': {80: 'http', 8080: 'http-proxy'}, '152.83.247.74': {80: 'http', 8080: 'http-proxy'}}
+
         httpHostStatusDict = {}
         for host, hostInfo in hostInfoDict.items():
             for port in hostInfo.keys():
-                urls = 'http://' + host + ":" + str(port) + '/thredds/catalog.html'
+                urls = f'http://{host}:{port}/thredds/catalog.html'
                 #print(urls)
                 try:
                     r = requests.get(urls, timeout=0.5, allow_redirects=False)
@@ -116,12 +116,38 @@ class ThreddsURLS:
                 threddsCandidateHostList.append(urls)
             else:
                 unknownError.append(urls)
-        print("There are", len(redirectToOtherURL), "urls redirect to firewall login page\n", redirectToOtherURL, '\n')
-        print("There are", len(threddsCandidateHostList), "urls may have Thredds installed\n", threddsCandidateHostList, '\n')
-        print("There are", len(noThreddsInstalledHostList), "urls have no Thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
-        print("There are", len(unknownError), "unknown error urls\n", unknownError, '\n')
-        t2 = time.time()
+        # print("There are", len(redirectToOtherURL), "urls redirect to firewall login page\n", redirectToOtherURL, '\n')
+        # print("There are", len(threddsCandidateHostList), "urls may have Thredds installed\n", threddsCandidateHostList, '\n')
+        # print("There are", len(noThreddsInstalledHostList), "urls have no Thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
+        # print("There are", len(unknownError), "unknown error urls\n", unknownError, '\n')
 
+        # for candidate in threddsCandidateHostList:
+        #     print(type(candidate))
+
+        """
+        Perform xml analysis below
+        """
+        xmls = []
+        threddsInfoDict = {}
+
+        for candidate in threddsCandidateHostList:
+            if 'html' in candidate:
+                links = candidate.replace("html", "xml")
+                xmls.append(links)
+            # print(type(links))
+
+        # print(xmls)
+        for xml in xmls:
+            #hosts = re.findall(r'[0-9]+(?:\.[0-9]+){3}', xml)
+            try:
+                r = requests.get(xml, timeout=0.5, allow_redirects=False)
+                if r.url not in threddsInfoDict:
+                    threddsInfoDict[r.url] = r.content
+            except:
+                pass
+        print(threddsInfoDict)
+
+        t2 = time.time()
         print("-" * 17 + "Time Used" + '-' * 17 + "\n" + str("Used %.2f" % (t2 - t1) + " seconds"))
 try:
     f = open(input("Please enter the path for the files that contains address: "), "r")
@@ -129,7 +155,6 @@ try:
 except:
     print("Please enter a valid file path")
 
-    #This is acceptable scanning speed and realiability for bunch of /16 network
-
 test1 = ThreddsURLS(network)
 test1.nmapPingScan()
+
