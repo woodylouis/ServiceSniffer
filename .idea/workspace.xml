@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71041f95-96bc-4293-ac33-20d015e55137" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/getThreddsURL.py" beforeDir="false" afterPath="$PROJECT_DIR$/getThreddsURL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/28082018_163905_ScanReport.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +26,7 @@
       <file leaf-file-name="getThreddsURL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getThreddsURL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
+            <state relative-caret-position="1751">
               <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -38,8 +38,8 @@
       <file leaf-file-name="helper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="6219" selection-start-line="5" selection-start-column="6219" selection-end-line="5" selection-end-column="6219" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -293,11 +293,11 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5011211" side_tool="true" weight="0.21654502" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37764934" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37764934" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32901832" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49887893" weight="0.29617834" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.102345414" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49887893" visible="true" weight="0.29576108" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.102345414" />
       <window_info anchor="right" id="R Packages" order="6" weight="0.3294031" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3269639" />
@@ -442,7 +442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getThreddsURL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
+        <state relative-caret-position="1751">
           <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -452,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6219" selection-start-line="5" selection-start-column="6219" selection-end-line="5" selection-end-column="6219" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

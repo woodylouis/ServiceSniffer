@@ -2,7 +2,6 @@ import requests
 from collections import defaultdict
 from operator import itemgetter
 import re
-
 xmls = []
 threddsInfoDict = {}
 for candidate in threddsCandidateHostList:
