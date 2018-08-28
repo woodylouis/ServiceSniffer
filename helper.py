@@ -4,6 +4,7 @@ from operator import itemgetter
 import re
 xmls = []
 threddsInfoDict = {}
+threddsCandidateHostList = []
 for candidate in threddsCandidateHostList:
     if 'html' in candidate:
         links = candidate.replace("html", "xml")
