@@ -1,4 +1,6 @@
 import requests
+from collections import defaultdict
+from operator import itemgetter
 import re
 
 xmls = []
@@ -11,32 +13,40 @@ for candidate in threddsCandidateHostList:
 
 
 #print(xmls)
-services = ['OPENDAP', 'DAP4', 'HTTPServer', 'WCS', 'WMS', 'NetcdfSubset']
-hostServicesDict = {}
-hostServiceList = []
-urls = ''
+s = 'serviceType='
+services = ['"OPENDAP"', '"DAP4"', '"HTTPServer"', '"WCS"', '"WMS"', '"NetcdfSubset"', '"HTTP"', '"NCSS"', '"NCML"', '"UDDC"', '"ISO"']
 content = ''
-for xml in xmls:
+serviceTypes = []
+urlList = []
+hostDict = {}
+for service in services:
+    # print(type(service))
+    t = s + service
+    serviceTypes.append(t)
+#print(serviceTypes)
 
-    #hosts = re.findall( r'[0-9]+(?:\.[0-9]+){3}', xml)
+for xml in xmls:
     try:
         r = requests.get(xml, timeout=0.5, allow_redirects=False)
         content = str(r.content).lower()
         urls = r.url
+        urlList.append(urls)
+        if urls not in hostDict:
+            hostDict[urls] = content
     except:
         pass
 
-for service in services:
-    if service.lower() in content:
-        # print(r.url, service)
-        hostServiceList.append(service)
-print(hostServiceList)
+#print(urlList)
 
-if service not in hostServicesDict:
-    hostServicesDict[urls] = hostServiceList
+s = []
 
+threddsInfoDict = {}
+for urls, urlInfo in hostDict.items():
+    #print(urlInfo)
+    for serviceType in serviceTypes:
+        if serviceType.lower() in urlInfo.lower():
+            pass
+            s = [urls, serviceType]
+            threddsInfoDict.setdefault(urls, []).append(serviceType.strip("serviceType=").replace('"', ''))
 
-
-
-print(hostServicesDict)
-
+print(threddsInfoDict)

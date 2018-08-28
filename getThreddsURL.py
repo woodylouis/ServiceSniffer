@@ -125,11 +125,10 @@ class ThreddsURLS:
         #     print(type(candidate))
 
         """
-        Perform xml analysis below
+        Perform xml analysis below and start getting thredds service type here
         """
         xmls = []
         threddsInfoDict = {}
-
         for candidate in threddsCandidateHostList:
             if 'html' in candidate:
                 links = candidate.replace("html", "xml")
@@ -137,14 +136,42 @@ class ThreddsURLS:
             # print(type(links))
 
         # print(xmls)
+        s = 'serviceType='
+        services = ['"OPENDAP"', '"DAP4"', '"HTTPServer"', '"WCS"', '"WMS"', '"NetcdfSubset"', '"HTTP"', '"NCSS"',
+                    '"NCML"', '"UDDC"', '"ISO"']
+        content = ''
+        serviceTypes = []
+        urlList = []
+        hostDict = {}
+        for service in services:
+            # print(type(service))
+            t = s + service
+            serviceTypes.append(t)
+        # print(serviceTypes)
+
         for xml in xmls:
-            #hosts = re.findall(r'[0-9]+(?:\.[0-9]+){3}', xml)
             try:
                 r = requests.get(xml, timeout=0.5, allow_redirects=False)
-                if r.url not in threddsInfoDict:
-                    threddsInfoDict[r.url] = r.content
+                content = str(r.content).lower()
+                urls = r.url
+                urlList.append(urls)
+                if urls not in hostDict:
+                    hostDict[urls] = content
             except:
                 pass
+
+        # print(urlList)
+
+        s = []
+
+        for urls, urlInfo in hostDict.items():
+            # print(urlInfo)
+            for serviceType in serviceTypes:
+                if serviceType.lower() in urlInfo.lower():
+                    pass
+                    s = [urls, serviceType]
+                    threddsInfoDict.setdefault(urls, []).append(serviceType.strip("serviceType=").replace('"', ''))
+
         print(threddsInfoDict)
 
         t2 = time.time()
