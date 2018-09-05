@@ -125,7 +125,9 @@ def get_thredds_hosts(network_prefix):
     # Perform xml analysis below and start getting thredds service type here
     # """
 
-def get_services(candidate_list):
+def get_services():
+
+
 
     xmls = []
     hostServiceDict = {}
@@ -170,26 +172,71 @@ def get_services(candidate_list):
     #print(hostServiceDict)
     return hostServiceDict
 
+"""""""""
+capture data to database here
+"""""""""
 def capture_host_in_db(hostServiceDict):
     #print(hostServiceDict)
     database = "C:\\Users\LI252\PycharmProjects\servicesniffer\database\sniffing.database"
     conn = create_connection(database)
     with conn:
-        for urls in hostServiceDict.keys():
+
+        hostTemp = []
+        for urls, services in hostServiceDict.items():
             host_port = urls.strip('http://').strip('thredds/catalog.xml').split(':')
-            #print(host_port)
-            # store hosts, port, and server URL, in database
-            thredds = (host_port[0], host_port[1], urls)
-            # create tasks
-            create_host(conn, thredds)
+            hostTemp.append(host_port[0])
+
+
+            for host in hostTemp:
+                """
+                Check if the hosts that already in the database. If not in the database, add the hosts.
+                """
+                if host != select_host_by_host_ip(conn, host):
+                    thredds = (host_port[0], host_port[1], urls)
+                    create_unique_host(conn, thredds)
+
+
+
+        temp = []
+        for service in hostServiceDict.values():
+            for i in service:
+                temp.append(i)
+
+        """
+        Check if the services that the hosts have. If not in the database, add the new service in the database.
+        """
+        # i > theService:
+        # i means all the services that are hosted per servers. theService is a unique service in database.
+        for i in temp:
+            theService = select_service(conn, i)
+            if i != theService:
+                create_unique_service(conn, i)
+
+        # for urls, services in hostServiceDict.items():
+        #     host_port = urls.strip('http://').strip('thredds/catalog.xml').split(':')
+        #     hostTemp.append(host_port[0])
+        #     for host in hostTemp:
+        #         if host == select_host_by_host_ip(conn, host):
+        #             host_id = select_host_id_by_host_ip(conn, host)
+        #             print(host_id)
+
+                #create_unique_host_service(conn, hostAndService)
+
+
+
+        #print(hostServiceDict)
+        #theService = select_service(conn, 'DAP4')
+
+
+
     # t2 = time.time()
     # print("-" * 17 + "Time Used" + '-' * 17 + "\n" + str("Used %.2f" % (t2 - t1) + " seconds"))
 
 
 
-"""
-database connection and create table functions
-"""
+"""""""""
+database connection and SQL
+"""""""""
 
 def create_connection(db_file):
     try:
@@ -199,7 +246,23 @@ def create_connection(db_file):
         print(e)
     return None
 
-def create_host(conn, host):
+def select_host_by_host_ip(conn, host_ip):
+    cur = conn.cursor()
+    cur.execute("SELECT host_ip FROM host WHERE host_ip = ?", (host_ip,))
+    rows = cur.fetchall()
+    for i in range(len(rows)):
+        aHost = rows[i][0]
+        return aHost
+
+def select_host_id_by_host_ip(conn, host_ip):
+    cur = conn.cursor()
+    cur.execute("SELECT DISTINCT(id) FROM host WHERE host_ip = ?", (host_ip,))
+    rows = cur.fetchall()
+    for i in range(len(rows)):
+        aHostID = rows[i]
+        print(aHostID)
+
+def create_unique_host(conn, host):
 
     sql = ''' INSERT INTO host(host_ip, port, server_url)
               VALUES(?,?,?) '''
@@ -207,25 +270,51 @@ def create_host(conn, host):
     cur.execute(sql, host)
     return cur.lastrowid
 
-def create_service(conn, service):
+def create_unique_service(conn, service):
 
     sql = ''' INSERT INTO service(service_type)
               VALUES(?) '''
     cur = conn.cursor()
-    cur.execute(sql, service)
+    cur.execute(sql, (service,))
     return cur.lastrowid
 
 
-try:
-    f = open(input("Please enter the path for the files that contains address: "), "r")
-    network = f.read()
-except:
-    print("Please enter a valid file path")
+def select_service(conn, service):
+
+    cur = conn.cursor()
+    cur.execute("SELECT service_type FROM service WHERE service_type = ?", (service,))
+    rows = cur.fetchall()
+    for i in range(len(rows)):
+        aService = rows[i][0]
+        return aService
+
+def select_service_id_by_name(conn, service):
+    cur = conn.cursor()
+    cur.execute("SELECT id FROM service WHERE service_type = ?", (service,))
+    rows = cur.fetchall()
+    for i in range(len(rows)):
+        aServiceID = rows[i][0]
+        return aServiceID
+
+
+def create_unique_host_service(conn, host_service_by_id):
+    sql = ''' INSERT INTO host_service(host_id, service_id )
+              VALUES(?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, host_service_by_id)
+
+
+# try:
+#     f = open(input("Please enter the path for the files that contains address: "), "r")
+#     network = f.read()
+# except:
+#     print("Please enter a valid file path")
 
 
 if __name__ == '__main__':
-    hosts = get_thredds_hosts(network)
-    hosts_services = get_services(hosts)
+    #hosts = get_thredds_hosts(network)
+    #hosts_services = get_services(hosts)
+    hosts_services = get_services()
     capture_host_in_db(hosts_services)
 
 
