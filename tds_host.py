@@ -68,7 +68,7 @@ def get_services(candidate_list):
 capture data to database here
 """""""""
 def capture_host_in_db(result):
-
+    #
     #print(hostServiceDict)
     database = "C:\\Users\LI252\PycharmProjects\servicesniffer\database\database.sqlite"
     conn = store.create_connection(database)
