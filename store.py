@@ -22,10 +22,10 @@ def select_host_by_host_ip(conn, host_ip):
 
 def select_host_id_by_host_ip(conn, host_ip):
     cur = conn.cursor()
-    cur.execute("SELECT DISTINCT(id) FROM hosts WHERE host_ip = ?", (host_ip,))
+    cur.execute("SELECT id FROM hosts WHERE host_ip = ?", (host_ip,))
     rows = cur.fetchall()
     for i in range(len(rows)):
-        aHostID = rows[i]
+        aHostID = rows[i][0]
         return (aHostID)
 
 def select_host_id_by_server_url(conn, server_url):
@@ -85,3 +85,11 @@ def select_host_services_by_host_id_and_service_id(conn, pair_of_id):
     for i in range(len(rows)):
         apairOfId = rows[i]
         return (apairOfId)
+
+def create_nc_files_record(conn, set_of_record):
+    sql = ''' INSERT INTO nc_files(nc_name, description, url_path, service_id, host_id)
+              VALUES(?,?,?,?,?) '''
+    cur = conn.cursor()
+    cur.execute(sql, set_of_record)
+
+
