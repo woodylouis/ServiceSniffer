@@ -8,7 +8,6 @@ import store
 import tds_host
 from urllib.parse import urlsplit
 
-url = "http://152.83.247.62:80/thredds/catalog.xml"
 hostFilesDict = {}
 
 def find_files(urls):
@@ -52,7 +51,6 @@ def find_files(urls):
 
     return (hostDatasetDict)
 
-# {'http://152.83.247.62:80/thredds/wcs/SMIPS/SMIPSv0.5.nc': ['SMIPSv0.5', 'SMIPSv0.5 Total Outputs'], 'http://152.83.247.62:80/thredds/dodsC/SMIPS/SMIPSv0.5.nc': ['SMIPSv0.5', 'SMIPSv0.5 Total Outputs'], 'http://152.83.247.62:80/thredds/dap4/SMIPS/SMIPSv0.5.nc': ['SMIPSv0.5', 'SMIPSv0.5 Total Outputs'], 'http://152.83.247.62:80/thredds/wms/SMIPS/SMIPSv0.5.nc': ['SMIPSv0.5', 'SMIPSv0.5 Total Outputs']}
 
 def catch_data_into_nc_files(hostDatasetDict):
     # for keys, items
@@ -165,57 +163,6 @@ if __name__ == '__main__':
 
 
 
-
-def catalog_ref_in_home():
-    hrefs = []
-    # for a in soup.find_all('catalogRef'.lower()):
-    #     hrefs.append(a['xlink:href'])
-    # return hrefs
-# show what you've found:
-# links = []
-# for link in list_of_links:
-#     urlPortion = url.split('/')
-#     hostOnly = f"{urlPortion[0]}//{urlPortion[2]}"
-#     hosthostWithThredds = f"{hostOnly}/{urlPortion[3]}/"
-#
-#     #['http:', '', '152.83.247.62:80', 'thredds', 'catalog.xml']
-#     if "/thredds/catalog/" in link:
-#         alink = (hostOnly + link)
-#         links.append(alink)
-#     else:
-#         alink = hosthostWithThredds + link
-#         links.append(alink)
-# print(links)
-#
-# subDirectory = []
-# validUrlInHome = []
-# for link in links:
-#
-#
-#     r = requests.get(link, timeout=0.5, allow_redirects=False)
-#     """
-#     We can get valid xlink in the home thredds catalog page in here
-#     """
-#     if r.status_code == 200:
-#         validUrlInHome.append(r.url)
-
-#print(validUrlInHome)
-# def getValid():
-#     for url in validUrlInHome:
-#
-#         subCatalogRef = find_files(url)
-#         #print(len(subCatalogRef) == 0)
-#         if len(subCatalogRef) != 0:
-#             subDirectory.append(subCatalogRef)
-#         else:
-#             #print(len(subDirectory) == 0)
-#             soup = BeautifulSoup(requests.get(url).text, features="lxml")
-#             #print(soup)
-#             ncs = []
-#             dataset = soup.find_all('urlpath')
-#             print(dataset)
-#
-# test = getValid()
 
 
 

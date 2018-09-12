@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71041f95-96bc-4293-ac33-20d015e55137" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/database/test.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/try.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/create.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nc_scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/nc_scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.py" beforeDir="false" afterPath="$PROJECT_DIR$/store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tds_host.py" beforeDir="false" afterPath="$PROJECT_DIR$/tds_host.py" afterDir="false" />
     </list>
     <ignored path="database/database.sqlite" />
     <ignored path="database/sniffing.database" />
@@ -108,15 +102,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nc_scraping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="-340">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1536723778035" expanded="true" signature="272:273" ph="..." />
-                <marker date="1536723778035" expanded="true" signature="493:597" ph="..." />
-                <marker date="1536723778035" expanded="true" signature="2146:2151" ph="..." />
-                <marker date="1536723778035" expanded="true" signature="2146:6573" ph="..." />
-                <marker date="1536723778035" expanded="true" signature="5808:6335" ph="..." />
+                <marker date="1536723945767" expanded="true" signature="220:221" ph="..." />
+                <marker date="1536723945767" expanded="true" signature="441:545" ph="..." />
+                <marker date="1536723945767" expanded="true" signature="1688:1693" ph="..." />
+                <marker date="1536723945767" expanded="true" signature="1688:6115" ph="..." />
+                <marker date="1536723945767" expanded="true" signature="5350:5877" ph="..." />
               </folding>
             </state>
           </provider>
@@ -454,14 +448,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3259958" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4973822" visible="true" weight="0.24321705" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4973822" weight="0.24321705" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39631784" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32917467" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49814126" weight="0.5106589" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49814126" visible="true" weight="0.22093023" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026178" side_tool="true" weight="0.20251939" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32821497" />
@@ -644,15 +638,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nc_scraping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="-340">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1536723778035" expanded="true" signature="272:273" ph="..." />
-            <marker date="1536723778035" expanded="true" signature="493:597" ph="..." />
-            <marker date="1536723778035" expanded="true" signature="2146:2151" ph="..." />
-            <marker date="1536723778035" expanded="true" signature="2146:6573" ph="..." />
-            <marker date="1536723778035" expanded="true" signature="5808:6335" ph="..." />
+            <marker date="1536723945767" expanded="true" signature="220:221" ph="..." />
+            <marker date="1536723945767" expanded="true" signature="441:545" ph="..." />
+            <marker date="1536723945767" expanded="true" signature="1688:1693" ph="..." />
+            <marker date="1536723945767" expanded="true" signature="1688:6115" ph="..." />
+            <marker date="1536723945767" expanded="true" signature="5350:5877" ph="..." />
           </folding>
         </state>
       </provider>
