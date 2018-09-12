@@ -91,5 +91,12 @@ def create_nc_files_record(conn, set_of_record):
               VALUES(?,?,?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, set_of_record)
+    return cur.lastrowid
 
-
+def select_nc_name_and_description_and_url_path_and_service_id_and_host_id(conn, set_of_record):
+    cur = conn.cursor()
+    cur.execute("SELECT nc_name, description, url_path, service_id, host_id FROM nc_files WHERE nc_name = ? AND description = ? AND url_path = ? AND service_id = ? AND host_id = ?", (set_of_record))
+    rows = cur.fetchall()
+    for i in range(len(rows)):
+        set_of_record = rows[i]
+        return (set_of_record)
