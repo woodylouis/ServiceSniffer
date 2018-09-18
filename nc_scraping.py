@@ -8,7 +8,6 @@ import store
 import tds_host
 from urllib.parse import urlsplit
 
-url = #
 hostFilesDict = {}
 
 def find_files_from_home_page(urls):

@@ -39,8 +39,8 @@ def select_host_id_by_server_url(conn, server_url):
 
 def create_unique_host(conn, host):
 
-    sql = ''' INSERT INTO hosts(host_ip, port, server_url)
-              VALUES(?,?,?) '''
+    sql = ''' INSERT INTO hosts(host_ip, port, server_url, container_description)
+              VALUES(?,?,?,?) '''
     cur = conn.cursor()
     cur.execute(sql, host)
     return cur.lastrowid
