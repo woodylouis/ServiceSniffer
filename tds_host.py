@@ -1,7 +1,7 @@
 import requests
 import sqlite3
 from sqlite3 import Error
-import re
+
 import store
 from bs4 import BeautifulSoup
 from collections import OrderedDict
@@ -179,7 +179,13 @@ def getCandiateUrl():
         print("Invalid file to interrogate valid thredds")
 
 
+
+
+
 if __name__ == '__main__':
     hosts = getCandiateUrl()
     hosts_services = get_services(hosts)
     capture_host_in_db(hosts_services)
+
+
+
