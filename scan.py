@@ -1,25 +1,38 @@
+##########################################################################################
+#######It is needed to be careful to run this program. It is involved NMAP package.#######
+##################Running this might arise attention from IM&T############################
+
 import nmap
-import time
 import datetime
 import requests
 
+##########################################################################################
+#########A raw data for scanning will be generated once the scanning has started##########
+###########The report will be keep updating until scanning process has stopped############
+##########################################################################################
 date = datetime.datetime.now().strftime("%d%m%Y_%H%M%S")
-reportName = str(date) + "_ScanReport" + ".txt"
-scanReport = open(reportName, "a")
+
+
 
 def get_thredds_hosts(network_prefix):
-    t1 = time.time()
+    reportName = str(date) + "_ScanReport" + ".txt"
+    scanReport = open(reportName, "a")
     nm = nmap.PortScanner()
     activeHosts = []
     portDict = {}
     hostInfoDict = {}
     """
     Perform simple ping and create a list of online hosts
-    This is acceptable scanning speed and realiability for bunch of /16 network
+    The parameters below might be aggressive.
+    However, this is acceptable scanning speed and accuracy for bunch of /16 network after perform few tests.
+    The parameters below might be aggressive can be modified.
     """
     pingResult = nm.scan(hosts=network_prefix,
                          arguments='--min-hostgroup=5000 --max-hostgroup=10000 --min-parallelism=100 --max-parallelism=200 --host-timeout=2s -T4 -n -sP')
 
+    """
+    Get active hosts only from raw scanning report
+    """
     for pResult in pingResult['scan'].values():
         hostStatus = pResult['status']['state']
         host = pResult['addresses']['ipv4']
@@ -27,9 +40,10 @@ def get_thredds_hosts(network_prefix):
             activeHosts.append(host)
     totalActiveHosts = ("There are " + str(len(activeHosts)) + " active hosts online. The hosts are: \n" + '\n'.join(
         '{}: {}'.format(*k) for k in enumerate(activeHosts, start=1)) + "\n")
-    # scanReport.write(str(totalActiveHosts))
-    # scanReport.write(totalActiveHosts)
-    # """
+
+
+    """
+    Get the hosts with open ports and is HTTP protocol from active hosts above
     # 1-1024 popular port
     # 1194 openVPN
     # 1433 Microsoft SQL Server
@@ -40,7 +54,8 @@ def get_thredds_hosts(network_prefix):
     # 5432 PostgreSQL database
     # 8080 HTTP Proxy such as Apache
     # 27017 Mongo database
-    # """
+    """
+
     for host in activeHosts:
         aDict = nm.scan(hosts=host,
                         arguments='--min-hostgroup=5000 --max-hostgroup=10000 --min-parallelism=100 --max-parallelism=200 --host-timeout=2s -T5 -n -v',
@@ -65,15 +80,21 @@ def get_thredds_hosts(network_prefix):
                     if host not in hostInfoDict:
                         hostInfoDict[host] = portDict
     # print(hostInfoDict)
-
+    """
+    In here, it will create a host status dictionary for all host using HTTP protocol.
+    Constructing URLs with host IP, ports, main thredds catalog path.
+    After that, it will generate a potential dictionary for potential TDS candidate by using REQUEST.
+    If the status is '404', these hosts will be ignore. 
+    If the status is '302', it means the page redirect to login page. These host may have TDS installed and are store in database
+    If the status is '200', it means these hosts are TDS servers and can be access.
+    """
     httpHostStatusDict = {}
+    hostInfoDict = {'152.83.247.62': {80: 'http', 8080: 'http-proxy'}, '152.83.247.74': {80: 'http', 8080: 'http-proxy'}}
     for host, hostInfo in hostInfoDict.items():
         for port in hostInfo.keys():
             urls = f'http://{host}:{port}/thredds/catalog.html'
-            # print(urls)
             try:
                 r = requests.get(urls, timeout=0.5, allow_redirects=False)
-                # print(r.url)
                 if str(r.url) not in httpHostStatusDict:
                     httpHostStatusDict[str(r.url)] = str(r.status_code)
             except requests.exceptions.HTTPError:
@@ -85,7 +106,6 @@ def get_thredds_hosts(network_prefix):
             except requests.exceptions.Timeout:
                 """
                 The request timed out while trying to connect to the remote server.
-
                 Requests that produced this error are safe to retry.
                 """
                 pass
@@ -103,32 +123,12 @@ def get_thredds_hosts(network_prefix):
         if status == '404':
             noThreddsInstalledHostList.append(urls)
         elif status == '302':
-            # redirect to CISCO gateway login page or link has been moved permanently
             redirectToOtherURL.append(urls)
         elif status == '200':
             threddsCandidateHostList.append(urls)
         else:
             unknownError.append(urls)
-        # print("There are", len(redirectToOtherURL), "urls redirect to firewall login page\n", redirectToOtherURL, '\n')
-        # print("There are", len(threddsCandidateHostList), "urls may have Thredds installed\n", threddsCandidateHostList, '\n')
-        # print("There are", len(noThreddsInstalledHostList), "urls have no Thredds installed in these hosts\n", noThreddsInstalledHostList, '\n')
-        # print("There are", len(unknownError), "unknown error urls\n", unknownError, '\n')
-        # for candidate in threddsCandidateHostList:
-        #     print(type(candidate))
+
     return threddsCandidateHostList
     # print(threddsCandidateHostList)
-    # """
-
-
-try:
-    f = open(input("Please enter the path for the files that contains address: "), "r")
-    network = f.read()
-except:
-    print("Please enter a valid file path")
-
-
-if __name__ == '__main__':
-    hosts = get_thredds_hosts(network)
-
-
 

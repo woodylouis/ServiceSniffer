@@ -1,15 +1,18 @@
+##########################################################################################
+#######It is needed to be careful to run this program. It is involved NMAP package.#######
+##################Running this might arise attention from IM&T############################
+
 import requests
 import sqlite3
 from sqlite3 import Error
-
 import store
 from bs4 import BeautifulSoup
 from collections import OrderedDict
+import scan
 
 hostServiceDict = {}
 def get_services(candidate_list):
-    #print(candidate_list)
-    #print(len(candidate_list))
+    print('CAUTION: Running program might arise attention from IM&T!')
     ###
     # Candiadte_list = ['http://host_ip_1:port/thredds/catalog.html', 'http://host_ip_2:port/thredds/catalog.html', 'http://host_ip_3:port/thredds/catalog.html'] #
     ###
@@ -167,19 +170,27 @@ def capture_host_in_db(result):
                     if hs != existingPair:
                         store.create_unique_host_service(conn, hs)
 
+"""
+Call getget_thredds_hosts from scan.py
+Local config file. 
+In the file,
+IP network address should be like:
+
+192.168.1.0/24
+192.168.2.0/24
+192.168.3.0/24
+
+"""
 def getCandiateUrl():
-    candidateList = []
+
     try:
-        with open(f"C:/Users/LI252/Desktop/threddsCandiates.txt", "r") as tdsFile:
-            for url in tdsFile.read().splitlines():
-                candidateList.append(url)
-            return candidateList
-
+        f = open(input("Please enter the path for the files that contains address: "), "r")
+        network = f.read()
     except:
-        print("Invalid file to interrogate valid thredds")
+        print("Please enter a valid file path")
 
-
-
+    hosts = scan.get_thredds_hosts(network)
+    return hosts
 
 
 if __name__ == '__main__':

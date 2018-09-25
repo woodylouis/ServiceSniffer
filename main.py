@@ -1,14 +1,17 @@
+##########################################################################################
+#######It is needed to be careful to run this program. It is involved NMAP package.#######
+##################Running this might arise attention from IM&T############################
+
 from bs4 import BeautifulSoup
 import requests
 import store
 import tds_host
 from urllib.parse import urlsplit
-#from tds_host import hosts_services
 import helper
+
 
 hostFilesDict = {}
 
-###
 """
 Get unqiue links
 """
@@ -18,7 +21,6 @@ def getTDSInfo(host_services):
         linkTemp.append(hosts)
 
     return linkTemp
-
 
 """
 Get nc files if they are located at home page
@@ -297,7 +299,6 @@ def getFilesFromHomeDirectories(listOfLinks):
                 There was an ambiguous exception that occurred while handling your request.
                 """
                 pass
-
 
 
 if __name__ == '__main__':
