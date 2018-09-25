@@ -1,3 +1,5 @@
+##The following files and folders will not be pushed to Github/Bitbucket
+
 *.sqlite
 *.database
 
