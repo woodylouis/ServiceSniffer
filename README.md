@@ -12,7 +12,7 @@ This project is to write code to interrogate CSIRO’s internal and external web
 <strong>Objective</strong>
 
 The goal of this project is to harvest NetCDF files from THREDDS servers across CSIRO network. Not only the files are found, but also the files are are also categorised by different data service types, such as OpenDAP, WMS, WMC, HTTP etc for each host.
-
+This program is customised to be used only within CSIRO network but can be modified for general purpose.
 
 <strong>Outcome</strong>
 
@@ -50,8 +50,13 @@ main.py<br>
 </p>
 
 
-Contacts:
+<strong>Find me on</strong>
 
-<b>Wenjin Li</b><br>
+www.woodylouis.me
+
+<strong>Contact</strong>
+
+louisli@woodylouis.me
+
 Wenjin.Li@csiro.au
 

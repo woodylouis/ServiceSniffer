@@ -1,5 +1,6 @@
 import store
 
+
 def compare(conn, serviceName):
     serviceId = ''
     if serviceName == 'odap':

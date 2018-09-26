@@ -9,7 +9,6 @@ import tds_host
 from urllib.parse import urlsplit
 import helper
 
-
 hostFilesDict = {}
 
 """
@@ -270,7 +269,7 @@ def getFilesFromHomeDirectories(listOfLinks):
                                 serviceId = helper.compare(conn, serviceName)
 
                         datasetRecord = (datasetName, description, completeURL, serviceId, hostId)
-                        # print(datasetRecord)
+                        print(datasetRecord)
 
                         existing = store.select_nc_name_and_description_and_url_path_and_service_id_and_host_id(conn, datasetRecord)
                         if datasetRecord != existing:

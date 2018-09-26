@@ -12,7 +12,7 @@ import scan
 
 hostServiceDict = {}
 def get_services(candidate_list):
-    print('CAUTION: Running program might arise attention from IM&T!')
+
     ###
     # Candiadte_list = ['http://host_ip_1:port/thredds/catalog.html', 'http://host_ip_2:port/thredds/catalog.html', 'http://host_ip_3:port/thredds/catalog.html'] #
     ###
@@ -109,6 +109,7 @@ def get_services(candidate_list):
                 result[i] = [service, description]
     # print(result)
     return result
+
 """""""""
 capture data to database here
 """""""""
@@ -171,7 +172,7 @@ def capture_host_in_db(result):
                         store.create_unique_host_service(conn, hs)
 
 """
-Call getget_thredds_hosts from scan.py
+Call get_thredds_hosts from scan.py
 Local config file. 
 In the file,
 IP network address should be like:
@@ -184,6 +185,7 @@ IP network address should be like:
 def getCandiateUrl():
 
     try:
+        print('CAUTION: Running program might arise attention from IM&T!')
         f = open(input("Please enter the path for the files that contains address: "), "r")
         network = f.read()
     except:
